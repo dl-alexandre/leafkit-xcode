@@ -1,6 +1,7 @@
 MIT License
 
 Copyright (c) 2020 Teague Clare
+Copyright (c) 2024 Dalton Alexandre
 
 Portions of this project related to scripted installation of IDE plugins to
 Xcode under MIT License from https://github.com/apollographql/xcode-graphql

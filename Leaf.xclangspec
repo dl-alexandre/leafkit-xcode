@@ -105,10 +105,11 @@
         Name = "Leaf";
         Syntax = {
             IncludeRules = (
-				"xcode.lang.leaf.tag.anonymous",
-				"xcode.lang.leaf.tag.if",
-				"xcode.lang.leaf.tag.bodied",
-          		"xcode.lang.leaf.tag.named",
+		"xcode.lang.html",
+		"xcode.lang.leaf.tag.anonymous",
+		"xcode.lang.leaf.tag.if",
+		"xcode.lang.leaf.tag.bodied",
+          	"xcode.lang.leaf.tag.named",
             );
             Type = "xcode.syntax.comment";
 
@@ -122,10 +123,10 @@
             Foldable = YES;
             Tokenizer = "xcode.lang.leaf.lexer";
             IncludeRules = (
-				"xcode.lang.leaf.tag.anonymous",
-				"xcode.lang.leaf.tag.if",
-          		"xcode.lang.leaf.tag.bodied",
-          		"xcode.lang.leaf.tag.named",
+		"xcode.lang.leaf.tag.anonymous",
+		"xcode.lang.leaf.tag.if",
+        	"xcode.lang.leaf.tag.bodied",
+       		"xcode.lang.leaf.tag.named",
             );
             Type = "xcode.syntax.comment";
         };
@@ -134,12 +135,12 @@
         Identifier = "xcode.lang.leaf.lexer";
         Syntax = {
             IncludeRules = (
- 				"xcode.lang.leaf.tag.anonymous",
- 				"xcode.lang.leaf.tag.named.if",
- 				"xcode.lang.leaf.tag.elseif",
- 				"xcode.lang.leaf.tag.else",
-          		"xcode.lang.leaf.tag.named",
-				"xcode.lang.leaf.tag.endname",
+ 		"xcode.lang.leaf.tag.anonymous",
+ 		"xcode.lang.leaf.tag.named.if",
+ 		"xcode.lang.leaf.tag.elseif",
+ 		"xcode.lang.leaf.tag.else",
+          	"xcode.lang.leaf.tag.named",
+		"xcode.lang.leaf.tag.endname",
             );
         };
     },
@@ -149,13 +150,14 @@
             IncludeRules = (
                 "xcode.lang.leaf.comment",
                 "xcode.lang.string",
-           		"xcode.lang.leaf.numeric",
-         		"xcode.lang.leaf.keyword",
-         		"xcode.lang.leaf.unop",
-        		"xcode.lang.leaf.binop",
+           	"xcode.lang.leaf.numeric",
+         	"xcode.lang.leaf.keyword",
+         	"xcode.lang.leaf.unop",
+        	"xcode.lang.leaf.binop",
             );
         };
     },    
+
 // /****************************************************************************/
 // MARK: Function Definitions
 // /****************************************************************************/
@@ -165,9 +167,9 @@
 		Syntax = {
             Tokenizer = "xcode.lang.leaf.lexer";
             Rules = (
-				"xcode.lang.leaf.tag.named",
-				"xcode.lang.leaf.body?",
-				"xcode.lang.leaf.tag.endname?",
+		"xcode.lang.leaf.tag.named",
+		"xcode.lang.leaf.body?",
+		"xcode.lang.leaf.tag.endname?",
             );
             Type = "xcode.syntax.declaration.struct"; 
             IndentWidth = 4;      
@@ -178,11 +180,11 @@
 		Syntax = {
             Tokenizer = "xcode.lang.leaf.lexer";
             Rules = (
-				"xcode.lang.leaf.tag.named.if",
-				"xcode.lang.leaf.body?",
-				"xcode.lang.leaf.tag.elseif*",
-				"xcode.lang.leaf.tag.else?",
-				"xcode.lang.leaf.tag.endname?",
+		"xcode.lang.leaf.tag.named.if",
+		"xcode.lang.leaf.body?",
+		"xcode.lang.leaf.tag.elseif*",
+		"xcode.lang.leaf.tag.else?",
+		"xcode.lang.leaf.tag.endname?",
             );
             Type = "xcode.syntax.declaration.struct";
         };
@@ -191,9 +193,9 @@
         Identifier = "xcode.lang.leaf.tag.elseif";
 		Syntax = {
             Rules = (
-				"xcode.lang.leaf.tag.named.elseif",
-				"xcode.lang.leaf.parameters",
-				"xcode.lang.leaf.body?",
+		"xcode.lang.leaf.tag.named.elseif",
+		"xcode.lang.leaf.parameters",
+		"xcode.lang.leaf.body?",
             );
             Type = "xcode.syntax.declaration.struct";
         };
@@ -202,8 +204,8 @@
         Identifier = "xcode.lang.leaf.tag.else";
 		Syntax = {
             Rules = (
-				"xcode.lang.leaf.tag.named.else",
-				"xcode.lang.leaf.body?",
+		"xcode.lang.leaf.tag.named.else",
+		"xcode.lang.leaf.body?",
             );
             Type = "xcode.syntax.declaration.struct";
         };
@@ -213,9 +215,9 @@
         Identifier = "xcode.lang.leaf.tag.named";
 		Syntax = {
             Rules = (
-				"#",
-				"xcode.lang.leaf.identifier.tag.name",
-				"xcode.lang.leaf.parameters",
+		"#",
+		"xcode.lang.leaf.identifier.tag.name",
+		"xcode.lang.leaf.parameters",
             );
             Type = "xcode.syntax.identifier.function";
         };
@@ -224,9 +226,9 @@
         Identifier = "xcode.lang.leaf.tag.named.if";
 		Syntax = {
             Rules = (
-				"#",
-				"xcode.lang.leaf.identifier.tag.if",
-				"xcode.lang.leaf.parameters",
+		"#",
+		"xcode.lang.leaf.identifier.tag.if",
+		"xcode.lang.leaf.parameters",
             );
             Type = "xcode.syntax.identifier.function";
         };
@@ -235,8 +237,8 @@
         Identifier = "xcode.lang.leaf.tag.anonymous";
 		Syntax = {
             Rules = (
-				"#",
-				"xcode.lang.leaf.expression",
+		"#",
+		"xcode.lang.leaf.expression",
             );
             Type = "xcode.syntax.identifier.function";
         };
@@ -245,7 +247,7 @@
         Identifier = "xcode.lang.leaf.tag.name";
         Syntax = {
             Rules = (
-				"xcode.lang.leaf.identifier.tag.name",
+		"xcode.lang.leaf.identifier.tag.name",
             );
             Type = "xcode.syntax.name.partial";
         };
@@ -286,8 +288,8 @@
 		Syntax = {
             Tokenizer = "xcode.lang.leaf.lexer.values";
 			Rules = (
-				"xcode.lang.leaf.unary|xcode.lang.leaf.numeric|xcode.lang.leaf.keyword",
-				"xcode.lang.leaf.expression.binary.rhs*",
+			"xcode.lang.leaf.unary|xcode.lang.leaf.numeric|xcode.lang.leaf.keyword",
+			"xcode.lang.leaf.expression.binary.rhs*",
             );
         };
     },
@@ -297,9 +299,9 @@
 			Tokenizer = "xcode.lang.leaf.lexer.values";
 			
 			Rules = (
-					"xcode.lang.leaf.paramDelimiter",
-					"xcode.lang.leaf.expression.complex",
-				);
+				"xcode.lang.leaf.paramDelimiter",
+				"xcode.lang.leaf.expression.complex",
+			);
 		};
 	},
 	{
@@ -314,18 +316,4 @@
 			Rules = ( "xcode.lang.leaf.binop", );
 		};
 	},
-
-// /****************************************************************************/
-// MARK: Leaf Comments
-// /****************************************************************************/
-    {
-        Identifier = "xcode.lang.leaf.comment";
-        Syntax = {
-            Start = "#";
-            End = "#";
-            Foldable = YES;
-            Recursive = NO;
-            Type = "xcode.syntax.comment.doc.keyword";
-        };
-    },
 )
