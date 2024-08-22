@@ -1,4 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
+# Get the directory of the script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Change to the script's directory
+cd "$SCRIPT_DIR" || { echo "Failed to change directory"; exit 1; }
 
 set -o xtrace
 
